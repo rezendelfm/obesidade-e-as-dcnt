@@ -1,0 +1,501 @@
+.section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: var(--off-white);
+    min-height: min(100vh, 800px);
+    min-width: 900px;
+    padding: 0 5em 0 7.5em;
+}
+
+.section h1,
+.section h2,
+.section p,
+.section ul {
+    color: var(--dark-blue);
+}
+
+.section h3 {
+    color: var(--deep-blue);
+}
+
+.dark-background-section {
+    background-color: var(--dark-blue);
+    background-image: url('../assets/page/section-transition-top.png');
+    background-position: top;
+    background-repeat: repeat-x;
+    padding-top: 13.5em;
+    background-size: 75%;
+}
+
+.transition-bg-section {
+    background-color: var(--off-white);
+    background-image: url('../assets/page/section-transition-bottom.png');
+    background-position: top;
+    background-repeat: repeat-x;
+    padding-top: 13.5em;
+    background-size: 75%;
+}
+
+.dark-background-section h1 {
+    color: var(--white);
+}
+
+.dark-background-section p,
+.dark-background-section ul {
+    color: var(--off-white);
+}
+
+.dark-background-section h2,
+.dark-background-section h3 {
+    color: var(--off-white);
+}
+
+.section-cover,
+.section-end-cover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: min(100vh, 800px);
+    width: min(80%, 1120px);
+}
+
+.section-cover h2 {
+    width: 60%;
+}
+
+.section-end-cover h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.25em;
+    text-align: center;
+    width: 70%;
+}
+
+.section .very-narrow-content {
+    margin: 0 auto;
+    min-height: min(100vh, 800px);
+    padding-right: 2.5em;
+    width: min(40%, 560px);
+}
+
+.section .narrow-content {
+    margin: 0 auto;
+    min-height: min(100vh, 800px);
+    padding-right: 2.5em;
+    width: min(50%, 700px);
+}
+
+.section .medium-content {
+    margin: 0 auto;
+    min-height: min(100vh, 800px);
+    width: min(75%, 1050px);
+}
+
+.section .wide-content {
+    min-height: min(100vh, 1100px);
+    width: min(100%, 1400px);
+}
+
+.section .narrow-content p:last-child,
+.section .medium-content p:last-child,
+.section .wide-content p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.content-title {
+    font-size: 1.8em;
+    font-weight: 800;
+    line-height: 1.15em;
+    padding: 1.5em 0 0.5em 0;
+    text-align: left;
+}
+
+.content-title-top {
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 1.3em;
+    padding: 1em 0 1.5em 0;
+}
+
+.cursive-content-title {
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 2.25em;
+    font-weight: 700;
+    padding: 0.75em 0;
+    text-align: left;
+}
+
+.side-link-wrapper a {
+    color: var(--dark-blue);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+    padding-top: 0.5em;
+    text-transform: uppercase;
+}
+
+.dark-background-section .side-link-wrapper a {
+    color: var(--off-white);
+}
+
+.quote-text {
+    color: var(--off-white);
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.25em;
+    padding-top: 1em;
+    text-align: right;
+}
+
+.quote-author {
+    color: var(--off-white);
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 1.15em;
+    font-weight: 600;
+    line-height: 1.25em;
+    padding-top: 0.25em;
+    text-align: right;
+}
+
+.side-link-wrapper a {
+    text-align: right;
+}
+
+.text-list {
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.25em;
+    padding-left: 2.5em;
+}
+
+.text-list li {
+    padding-bottom: 0.5em;
+}
+
+.big-number {
+    display: block;
+    color: var(--off-white);
+    font-size: 6.5em;
+    font-weight: 800;
+    line-height: 1.25em;
+    text-align: center;
+}
+
+.big-number.text-dark {
+    color: var(--dark-blue);
+}
+
+.big-number-text {
+    font-size: 1.5em;
+    text-align: center;
+    width: 60%;
+}
+
+.number-note {
+    display: block;
+    color: var(--off-white);
+    font-size: 1.8em;
+    font-weight: 400;
+    line-height: 1.15em;
+    text-align: center;
+}
+
+.number-note.text-dark {
+    color: var(--dark-blue);
+}
+
+.line-decoration {
+    border-top: 1px solid var(--off-white);
+    font-size: 1.15em;
+    margin-top: 3em;
+    padding-top: 0.5em;
+}
+
+.chart-details-wrapper .content-title {
+    padding-top: 0.5em;
+}
+
+.chart-details-wrapper option {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+
+.chart-details-wrapper option {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+
+.chart-details-wrapper p {
+    font-size: 1em;
+}
+
+.highlighted-text-green {
+    display: inline-block;
+    background-color: var(--green);
+    color: var(--off-white);
+    font-weight: bold;
+    padding: 0 0.3em 0.1em 0.3em;
+}
+
+.highlighted-text-orange {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--dark-blue);
+    font-weight: bold;
+    padding: 0 0.3em 0.1em 0.3em;
+}
+
+.highlighted-text-red {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--off-white);
+    font-weight: bold;
+    padding: 0 0.3em 0.1em 0.3em;
+}
+
+.highlighted-text-wine {
+    display: inline-block;
+    background-color: var(--wine-red);
+    color: var(--off-white);
+    font-weight: bold;
+    padding: 0 0.3em 0.1em 0.3em;
+}
+
+.highlighted-text-yellow {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--dark-blue);
+    font-weight: bold;
+    padding: 0 0.3em 0.1em 0.3em;
+}
+
+.bold-text {
+    display: inline;
+    font-weight: 900;
+}
+
+/* Welcome Section */
+#welcome-section {
+    background-color: var(--dark-blue);
+    height: 100vh;
+    min-width: 900px;
+    padding: 0 2.5em 0 2.5em;
+}
+
+#welcome-section img {
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    width: min(100%, 2400px);
+}
+
+#welcome-section .grid-2-columns {
+    grid-column-gap: 2.5em;
+    width: min(100%, 2400px);
+}
+
+.welcome-title {
+    color: var(--off-white);
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 4em;
+    font-weight: 800;
+    line-height: 0.9em;
+    text-align: right;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 0em;
+}
+
+.welcome-title.small {
+    font-size: 0.5em;
+    padding-bottom: 0.1em;
+}
+
+.welcome-subtitle {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.75em;
+    font-weight: 300;
+    line-height: 0.8em;
+    text-rendering: optimizeLegibility;
+    text-align: right;
+    color: var(--light-blue);
+}
+
+.welcome-text {
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 1.15em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 1.25em;
+    text-align: left;
+    color: var(--light-blue);
+    width: 75%;
+}
+
+#welcome-buttons-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.5em;
+    width: min(100%, 2400px);
+}
+
+#welcome-buttons-wrapper span {
+    color: var(--off-white);
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin: 0 0.5em;
+}
+
+#results-button {
+    display: inline-block;
+    background: url('../assets/page/jump-button.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    height: 4em;
+    width: 15em;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    content: '';
+}
+
+#results-button:hover {
+    background: url('../assets/page/jump-button-hover.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#story-button {
+    display: inline-block;
+    background: url('../assets/page/scroll-button.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    height: 4em;
+    width: 15em;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    content: '';
+}
+
+#story-button:hover {
+    background: url('../assets/page/scroll-button-hover.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Introduction Section */
+#introduction-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: var(--off-white);
+    height: min(100vh, 800px);
+    min-height: min(100vh, 800px);
+    min-width: 900px;
+    padding: 10em 5em 0.5em 7.5em;
+}
+
+#introduction-section p {
+    color: var(--dark-blue);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.75em;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    width: min(70%, 1080px);
+}
+
+/* Credits Section */
+#credits-section {
+    min-width: 900px;
+}
+
+#credits-section div:first-child {
+    padding-top: 10em;
+}
+
+#credits-section h2 {
+    font-weight: 800;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#credits-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.5em;
+}
+
+#credits-section #financing-details {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 2.5em;
+    width: 100%;
+}
+
+#credits-section #development-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5em;
+}
+
+#credits-section #development-details a {
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 500;
+    padding-left: 0.25em;
+}
+
+#credits-section #references-title {
+    padding: 2.5em 0 1em 0;
+}
+
+#credits-section ol li {
+    padding: 0 0 1.25em 1em;
+    line-height: 1.25em;
+}
+
+#credits-section #thank-you-img {
+    margin: 0 auto;
+    padding-bottom: 5em;
+    width: 50%;
+}

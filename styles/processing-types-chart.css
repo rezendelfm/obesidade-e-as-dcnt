@@ -1,0 +1,55 @@
+#processing-types-chart-container {
+    width: 100%;
+    height: auto;
+}
+
+#processing-types-details {
+    height: 100%;
+}
+
+#processing-types-details p {
+    line-height: 1.15em;
+}
+
+#processing-type-disclaimer {
+    color: var(--off-white);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+#processing-type-name {
+    color: var(--off-white);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 0 0.3em 0.2em 0.23em;
+}
+
+#processing-type-description {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.processing-type-area {
+    cursor: pointer;
+    fill: transparent;
+}
+
+.processing-type-1 {
+    background-color: var(--green);
+}
+
+.processing-type-2 {
+    background-color: var(--yellow);
+}
+
+.processing-type-3 {
+    background-color: var(--orange);
+}
+
+.processing-type-4 {
+    background-color: var(--wine-red);
+}

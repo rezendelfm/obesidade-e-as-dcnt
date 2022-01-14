@@ -1,0 +1,12 @@
+.display-none {
+    display: none;
+}
+
+.sticky-container {
+    position: relative;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 0;
+}

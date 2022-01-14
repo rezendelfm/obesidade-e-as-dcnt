@@ -1,0 +1,74 @@
+#map-chart-container {
+    width: 100%;
+    height: auto;
+}
+
+#map-chart-disclaimer {
+    color: var(--dark-blue);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.map-chart-shape-area {
+    stroke: var(--white);
+}
+
+#map-chart-tooltip-area {
+    fill: var(--white);
+    opacity: 0.9;
+}
+
+#map-chart-tooltip text {
+    fill: var(--dark-gray);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#map-chart-tooltip .map-chart-tooltip-label {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+#map-chart-ranking-axis line,
+#map-chart-ranking-axis path {
+    display: none;
+}
+
+.map-chart-legend-text {
+    color: var(--dark-gray);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.map-chart-legend-details {
+    color: var(--dark-gray);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+#map-chart-ranking-axis text {
+    color: var(--dark-gray);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.map-chart-ranking-label {
+    cursor: default;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.map-chart-hidden-bar {
+    fill: transparent;
+}
+
+.map-chart-percent-bar {
+    fill: var(--light-gray);
+}

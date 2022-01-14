@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Title, Description and Favicon -->
+        <title>Obesidade e as DCNT</title>
+        <meta name="description" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/page/favicon.png">
+
+        <!--Setup--->
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"
+        />
+
+        <!-- Preload Images -->
+        <link
+            rel="preload"
+            as="image"
+            href="assets/page/jump-button.png"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="assets/page/scroll-button.png"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="assets/page/jump-button-hover.png"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="assets/page/scroll-button-hover.png"
+        />
+
+        <!-- Social Media Sharing -->
+        <meta property="og:title" content="Obesidade e as DCNT" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/root.css" />
+        <link rel="stylesheet" href="styles/navigation.css" />
+        <link rel="stylesheet" href="styles/content.css" />
+        <link rel="stylesheet" href="styles/animations.css" />
+        <link rel="stylesheet" href="styles/main-chart.css" />
+        <link rel="stylesheet" href="styles/map-chart.css" />
+        <link rel="stylesheet" href="styles/processing-types-chart.css" />
+
+        <!-- Libraries -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://d3js.org/topojson.v3.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Mobile Alert -->
+        <div id="custom-mobile-alert">
+            <div id="close-custom-mobile-alert">×</div>
+            <div>
+                Para uma melhor experiência, acesse a história em seu
+                <i>desktop</i>.
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div id="navigation-menu">
+            <ul>
+                <li class="current-section">
+                    <div></div>
+                    <span>Epidemia de obesidade e as DCNT</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span
+                        >As causas da obesidade em indivíduos e populações</span
+                    >
+                </li>
+                <li>
+                    <div></div>
+                    <span>O problema dos ultraprocessados</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>Custos e Sobrecarga no SUS</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>Políticas públicas para a saúde coletiva</span>
+                </li>
+                <li>
+                    <div></div>
+                    <span>Equipe e Referências</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="flex-center-center">
+            <img id="intro-image" src="assets/page/welcome-section-banner.png" />
+            <div class="grid-2-columns flex-center-center narrow-content">
+                <div class="flex-right-center">
+                    <p class="welcome-title">
+                        <span class="welcome-title small">A</span>
+                        EPIDEMIA
+                        <br />
+                        <span class="welcome-title small">DE</span>
+                        OBESIDADE
+                        <br />
+                        <span class="welcome-title small">E AS</span>
+                        DCNT
+                    </p>
+                    <p class="welcome-subtitle">
+                        Causas, custos e sobrecarga no SUS
+                    </p>
+                </div>
+                <div class="flex-left-center">
+                    <p class="welcome-text">
+                        No Brasil, a prevalência de excesso de peso aumentou de
+                        42,6% em
+                        <span class="highlighted-text-yellow">2006</span> para
+                        55,4% em
+                        <span class="highlighted-text-orange">2019</span>.
+                        Projeções indicam que em
+                        <span class="highlighted-text-red">2030</span> pode
+                        chegar a 68%.
+                    </p>
+                    <p class="welcome-text">
+                        Estimativas que preocupam ao considerarmos o risco
+                        associado de diversas Doenças Crônicas não
+                        Transmissíveis e, consequentemente, os impactos no
+                        Sistema Único de Saúde.
+                    </p>
+                </div>
+            </div>
+            <div id="welcome-buttons-wrapper" class="flex-center-center">
+                <div id="results-button" class="welcome-button"></div>
+                <span>OU</span>
+                <div id="story-button" class="welcome-button"></div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction-section">
+            <p class="text-font-grotesque">
+                Por muito tempo, o foco no controle do sobrepeso e da obesidade
+                tem sido direcionado às escolhas individuais. Contudo, ao
+                entendermos o seu comportamento de epidemia, podemos ter ações
+                mais assertivas para cuidar da saúde da população. No Brasil, o
+                número de pessoas vivendo com sobrepeso ou obesidade tem
+                crescido de modo expressivo.
+            </p>
+            <p class="text-font-grotesque">
+                Projeções para 2030 indicam que
+                68% da população poderá estar
+                com <span class="highlighted-text-orange"> excesso de peso</span>
+                e 26% com <span class="highlighted-text-red">obesidade</span>.
+                Estimativas que preocupam ao considerarmos que o excesso de peso e obesidade
+                aumentam o risco de diversas Doenças Crônicas não Transmissíveis
+                (DCNT) e, consequentemente, têm grandes impactos no Sistema
+                Único de Saúde (SUS).
+            </p>
+            <img src="assets/page/introduction-peeps.png" />
+        </section>
+
+        <!-- Epidemics Section -->
+        <section class="section dark-background-section" id="epidemic-section">
+            <div class="section-cover">
+                <h1>
+                    Epidemia de <br />
+                    obesidade e as DCNT
+                </h1>
+                <h2>
+                    Ao contrário de outros fatores de risco para o
+                    desenvolvimento de doenças crônicas não transmissíveis
+                    (DCNT), a porcentagem da população que apresenta excesso de
+                    peso ou obesidade cresce de forma preocupante e epidêmica.
+                </h2>
+            </div>
+            <div class="grid-2-columns narrow-content">
+                <div class="flex-right-down">
+                    <img src="assets/icons/preventable-death.png" />
+                    <div class="quote-text">
+                        “A morte em idade avançada é inevitável, mas a morte
+                        prematura não o é”
+                    </div>
+                    <div class="quote-author">Richard Doll, 1994</div>
+                </div>
+
+                <div class="flex-center-center">
+                    <p class="text-font-crimson">
+                        As DCNT são doenças multifatoriais, isto é, são causadas
+                        por diversos fatores de risco, apresentam longos
+                        períodos de latência e afetam pessoas por muitos anos,
+                        até mesmo décadas, podendo resultar em incapacidades
+                        funcionais. Exemplos de DCNT são as doenças
+                        cardiovasculares, doenças respiratórias crônicas, as
+                        neoplasias (cânceres) e a diabetes <i>mellitus</i>.
+                    </p>
+                    <p class="text-font-crimson">
+                        Em 2019 elas foram responsáveis por
+                        <span class="bold-text">55% das 738.371 mortes</span> de
+                        adultos no Brasil. Dessas, 173.207 ou
+                        <span class="bold-text"
+                            >56,1%, ocorreram entre 30 e 69 anos</span
+                        >
+                        de idade e, portanto, são consideradas
+                        <span class="bold-text">prematuras e evitáveis</span>.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-3-columns medium-content" id="risk-factors-scroll">
+                <div class="flex-left-center">
+                    <p
+                        id="risk-factors-p-1"
+                        class="
+                            text-font-crimson
+                            extra-padding-top extra-padding-bottom
+                        "
+                    >
+                        Os
+                        <span class="highlighted-text-yellow"
+                            >principais fatores</span
+                        >
+                        de risco para DCNT são tabagismo, consumo abusivo de
+                        álcool, alimentação não saudável e inatividade física.
+                    </p>
+                    <p
+                        id="risk-factors-p-2"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        Além disso, há fatores de
+                        <span class="highlighted-text-orange"
+                            >risco metabólicos</span
+                        >, como hipertensão (pressão arterial elevada),
+                        hiperglicemia (glicose elevada no sangue) e excesso de
+                        peso/obesidade.
+                    </p>
+                    <p
+                        id="risk-factors-p-3"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        Alguns fatores de risco para DCNT têm reduzido nos
+                        últimos anos, como é o caso do
+                        <span class="highlighted-text-green">tabagismo</span>.
+                    </p>
+                </div>
+                <div
+                    class="
+                        grid-item-2-3
+                        flex-center-up
+                        no-padding
+                        sticky-container
+                    "
+                >
+                    <div id="risk-factors-sticky" class="small-padding-top">
+                        <img
+                            id="risk-factors-img-1"
+                            class="risk-factors-image"
+                            src="assets/animations/risk-factors-1.png"
+                        />
+                        <img
+                            class="display-none"
+                            id="risk-factors-img-2"
+                            class="risk-factors-image"
+                            src="assets/animations/risk-factors-2.png"
+                        />
+                        <img
+                            class="display-none"
+                            id="risk-factors-img-3"
+                            class="risk-factors-image"
+                            src="assets/animations/risk-factors-3.png"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="grid-3-columns medium-content">
+                <div class="grid-item-1-2 flex-center-center">
+                    <img src="assets/static/tabagism.png" />
+                </div>
+                <div class="flex-center-center">
+                    <p class="text-font-crimson">
+                        Entre 1989 e 2019, uma série de políticas públicas
+                        reduziu de 34,8% para 12,6% a porcentagem de fumantes no
+                        Brasil.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-4-columns wide-content">
+                <div class="flex-left-center">
+                    <p class="text-font-crimson">
+                        Outros fatores de risco, no entanto, têm apresentado
+                        tendência de
+                        <span class="bold-text">aumento preocupante</span>, como
+                        é o caso do
+                        <span class="bold-text"
+                            >excesso de peso e da obesidade</span
+                        >.
+                    </p>
+                    <p class="text-font-crimson">
+                        O acúmulo excessivo de gordura corporal está associado
+                        com o aumento no risco de mais de 30 DCNT, em maior ou
+                        menor grau.
+                    </p>
+                    <h2 class="content-title">
+                        Ao lado, entenda a porcentagem dessas 30 DCNT que foram
+                        causadas pelo excesso de peso e obesidade no Brasil em
+                        2019:
+                    </h2>
+                </div>
+                <div class="grid-item-2-4 flex-center-center">
+                    <img src="assets/static/distribution-dcnts.png" />
+                </div>
+            </div>
+            <div class="grid-2-columns narrow-content">
+                <div class="flex-center-up">
+                    <h2 class="content-title">
+                        A prevalência de obesidade (porcentagem de pessoas, em
+                        um período e local, que apresentam esse quadro clínico)
+                    </h2>
+                </div>
+                <div class="flex-left-center">
+                    <h3>No mundo...</h3>
+                    <p class="text-font-crimson">
+                        <span class="bold-text">triplicou</span> entre 1975 e
+                        2016, chegando a 36% das pessoas com excesso de peso e
+                        13% com obesidade.
+                    </p>
+                    <h3>...e no Brasil</h3>
+                    <p class="text-font-crimson">
+                        Entre 2006 e 2019, a prevalência de excesso de peso
+                        aumentou de 42,6% para 55,4% da população. Para a
+                        obesidade essa mudança foi de 11,8% para 20,3%.
+                    </p>
+                    <p class="text-font-crimson">
+                        Se nada for feito, projeções para 2030 indicam que esses
+                        valores podem alcançar
+                        <span class="bold-text"
+                            >68% para o excesso de peso e 26% para a
+                            obesidade</span
+                        >.
+                    </p>
+                </div>
+            </div>
+            <div class="section-end-cover">
+                <h2>
+                    Mudanças efetivas nesse quadro só podem ser alcançadas com a
+                    melhor compreensão e ação sobre as causas da obesidade. É
+                    neste ponto que nossa perspectiva deve ser ampliada para que
+                    possamos pensar em prevenção da obesidade na população.
+                </h2>
+            </div>
+        </section>
+
+        <!-- Causes Section -->
+        <section class="section transition-bg-section" id="causes-section">
+            <div class="section-cover">
+                <h1>As causas da obesidade em indivíduos e populações</h1>
+                <h2>
+                    Estratégias de prevenção da obesidade devem priorizar o
+                    controle das causas da obesidade em populações, ou seja, as
+                    causas que influenciam e explicam o aumento da prevalência
+                    da obesidade, em detrimento das causas da obesidade em
+                    indivíduos.
+                </h2>
+            </div>
+            <div class="grid-3-columns medium-content" id="causes-scroll">
+                <div class="flex-left-center">
+                    <h3
+                        id="causes-p-1"
+                        class="
+                            content-title
+                            extra-padding-top extra-padding-bottom
+                        "
+                    >
+                        Por que uma pessoa desenvolve obesidade?
+                    </h3>
+                    <p
+                        id="causes-p-2"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        Diversos fatores têm sido descritos na literatura, como
+                        a alimentação não saudável, inatividade física, privação
+                        de sono, predisposição genética,
+                        <span> o uso de medicamentos, </span>
+                        questões hormonais, estresse, obesidade materna, entre
+                        outros.
+                    </p>
+                    <p
+                        id="causes-p-3"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        Alguns desses fatores são
+                        <span class="highlighted-text-wine">individuais</span>,
+                        enquanto que outros são
+                        <span class="highlighted-text-red">compartilhados</span>
+                        por indivíduos de uma mesma população.
+                    </p>
+                    <p
+                        id="causes-p-4"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        É comum que estratégias de prevenção à obesidade tratem
+                        comportamentos populacionais -
+                        <span class="highlighted-text-red">alimentação</span>
+                        e
+                        <span class="highlighted-text-red"
+                            >atividade física</span
+                        >, por exemplo - como escolhas individuais.
+                    </p>
+                    <p
+                        id="causes-p-5"
+                        class="text-font-crimson extra-padding-bottom"
+                    >
+                        Essas abordagens, assim como as que focam apenas em
+                        fatores relacionados às causas em indivíduos, são
+                        inadequadas para explicar e prevenir a obesidade como
+                        uma epidemia.
+                    </p>
+                </div>
+                <div
+                    class="
+                        grid-item-2-3
+                        flex-center-up
+                        no-padding
+                        sticky-container
+                    "
+                >
+                    <div id="causes-sticky" class="small-padding-top">
+                        <img id="causes-img-1" src="assets/animations/causes-1.png" />
+                        <img
+                            class="display-none"
+                            id="causes-img-2"
+                            src="assets/animations/causes-2.png"
+                        />
+                        <img
+                            class="display-none"
+                            id="causes-img-3"
+                            src="assets/animations/causes-3.png"
+                        />
+                        <img
+                            class="display-none"
+                            id="causes-img-4"
+                            src="assets/animations/causes-4.png"
+                        />
+                        <img
+                            class="display-none"
+                            id="causes-img-5"
+                            src="assets/animations/causes-5.png"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center-center very-narrow-content">
+                <p class="text-font-crimson">
+                    Por exemplo, fatores genéticos aumentam a predisposição à
+                    obesidade em indivíduos, mas a genética não muda
+                    drasticamente em poucos anos ou décadas e, portanto, não
+                    poderia explicar o aumento na obesidade em populações ao
+                    longo dos últimos anos.
+                </p>
+                <p class="text-font-crimson">
+                    Para identificar as causas da obesidade em populações, ou
+                    seja, a influência dos fatores compartilhados pelos
+                    indivíduos, precisamos olhar para a grande variabilidade da
+                    prevalência de obesidade entre países, regiões e ao longo do
+                    tempo.
+                </p>
+                <p class="text-font-crimson">
+                    Quando uma população que divide hábitos culturais entre si
+                    tem uma prevalência de obesidade maior do que outra
+                    população, com hábitos diferentes, temos um indício da
+                    influência do comportamento coletivo sobre as pessoas.
+                    <span class="bold-text"
+                        >Um bom exemplo, e para o qual há muitos dados, é o dos
+                        Estados Unidos</span
+                    >.
+                </p>
+            </div>
+            <div class="grid-3-columns medium-content">
+                <div class="grid-item-1-2 flex-center-center">
+                    <img src="assets/static/obesity-usa.png" />
+                </div>
+                <div class="flex-left-center">
+                    <p class="text-font-crimson">
+                        Entre 1960 e 1970, a prevalência de obesidade nos EUA se
+                        mantinha estável entre todos os estratos etários da
+                        população.
+                        <span class="bold-text"
+                            >No entanto, a partir de 1975, pode-se observar um
+                            rápido aumento desse percentual</span
+                        >.
+                    </p>
+                </div>
+            </div>
+            <div class="flex-center-center very-narrow-content">
+                <h2 class="cursive-content-title">
+                    O que aconteceu que poderia explicar essa mudança?
+                </h2>
+                <p class="text-font-crimson">
+                    Causas individuais dificilmente teriam essa influência na
+                    população em tão pouco tempo, seja por fatores genéticos ou
+                    pela predisposição de cada pessoa a se exercitar ou ter uma
+                    alimentação saudável.
+                </p>
+                <p class="text-font-crimson">
+                    Entretanto, alguns eventos da década de 70 afetaram a dieta
+                    da população dos EUA de forma coletiva:
+                </p>
+                <ul class="text-list text-font-crimson">
+                    <li>Mudanças nas leis agrícolas no país;</li>
+                    <li><i>Marketing</i> acelerado;</li>
+                    <li>
+                        Disponibilidade e acesso a alimentos com alto teor
+                        calórico; e
+                    </li>
+                    <li>
+                        Introdução no sistema alimentar de adoçantes como xarope
+                        de milho, com alto teor de frutose.
+                    </li>
+                </ul>
+            </div>
+            <div class="section-end-cover">
+                <h2>
+                    A maioria dos países têm passado por mudanças importantes no
+                    sistema alimentar, com consequências na mudança no padrão da
+                    dieta. E é dentro desse contexto de mudança que surge a
+                    preocupação com os alimentos ultraprocessados.
+                </h2>
+            </div>
+        </section>
+
+        <!-- Ultraprocessed Section -->
+        <section
+            class="section dark-background-section"
+            id="ultraprocessed-section"
+        >
+            <div class="section-cover">
+                <h1>O problema dos ultraprocessados</h1>
+                <h2>
+                    Estudos epidemiológicos têm mostrado uma associação entre
+                    consumo de alimentos ultraprocessados e o aumento no risco
+                    da obesidade e diversas DCNT.
+                </h2>
+            </div>
+            <div class="grid-3-columns narrow-content">
+                <div class="flex-right-down side-link-wrapper">
+                    <img
+                        src="assets/icons/food-classification.png"
+                        class="limited-height-img"
+                    />
+                    <a
+                        href="https://www.fsp.usp.br/nupens/a-classificacao-nova/"
+                        target="_blank"
+                        >CONHEÇA MAIS SOBRE A CLASSIFICAÇÃO NOVA</a
+                    >
+                </div>
+                <div class="grid-item-2-3 flex-left-down">
+                    <p class="text-font-crimson">
+                        Os ultraprocessados não são propriamente comida de
+                        verdade. Esses produtos são
+                        <span class="bold-text"
+                            >formulações de origem e uso industriais</span
+                        >, obtidas por meio do fracionamento de alimentos
+                        <i>in natura</i> (ou minimamente processados, a exemplo
+                        do açúcar, óleos e gorduras), nas quais utilizam-se
+                        corantes, aromatizantes, emulsificantes e outros
+                        aditivos que os tornam hiper palatáveis. São produtos
+                        com baixo custo de produção, prontos para consumo e com
+                        alto tempo de prateleira, feitos para potencializar o
+                        lucro.
+                    </p>
+                    <p class="text-font-crimson">
+                        A percepção de que os alimentos poderiam ser
+                        classificados em relação ao nível, extensão e propósito
+                        do processamento surgiu no Brasil no final dos anos
+                        2000, na forma da
+                        <span class="bold-text">classificação NOVA</span>.
+                        Antes, os alimentos eram classificados como fontes de
+                        nutrientes específicos, independentemente do seu
+                        processamento.
+                    </p>
+                </div>
+            </div>
+            <div class="flex-center-center wide-content full-width">
+                <div>
+                    <h2 class="content-title-top">
+                        Segundo a NOVA, os alimentos podem ser classificados em
+                        4 grandes grupos:
+                    </h2>
+                </div>
+                <div class="grid-4-columns flex-center-center">
+                    <div
+                        class="grid-item-1-3"
+                        id="processing-types-chart-container"
+                    ></div>
+                    <div id="processing-types-details" class="flex-center-down">
+                        <p>
+                            <span id="processing-type-disclaimer"
+                                >Clique sobre os ícones para saber mais sobre os
+                                grupos.</span
+                            >
+                            <span id="processing-type-name"></span>
+                            <span id="processing-type-description"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center-center medium-content">
+                <p class="text-font-crimson big-number-text">
+                    Dados de produção de ultraprocessados (diretamente
+                    relacionado com o consumo) indicam um crescimento
+                    de:
+                </p>
+                <div class="grid-2-columns" class="text-font-grotesque">
+                    <div>
+                        <img src="assets/icons/ultraprocessed-worldwide.png"/>
+                        <span class="text-font-grotesque big-number"
+                            >+43,7%</span
+                        >
+                        <br />
+                        <span class="text-font-grotesque number-note"
+                            >no mundo</span
+                        >
+                    </div>
+                    <div>
+                        <img src="assets/icons/ultraprocessed-latam.png"/>
+                        <span class="text-font-grotesque big-number"
+                            >+48,0%</span
+                        >
+                        <br />
+                        <span class="text-font-grotesque number-note"
+                            >na América Latina</span
+                        >
+                    </div>
+                </div>
+                <p class="text-font-crimson line-decoration">
+                    <i>Entre os anos de 2000 e 2013</i>
+                </p>
+            </div>
+            <div class="grid-3-columns medium-content">
+                <div class="grid-item-1-2 flex-center-center">
+                    <img src="assets/static/food-plates.png" />
+                </div>
+                <div class="flex-left-center">
+                    <p class="text-font-crimson">
+                        Nos EUA, onde a participação dos alimentos
+                        ultraprocessados no total calórico é de 57,5%, a
+                        <span class="bold-text"
+                            >prevalência de obesidade já chegou a 43%</span
+                        >.
+                    </p>
+                    <p class="text-font-crimson">
+                        Já no Brasil, onde ainda temos uma cultura alimentar
+                        alicerçada em alimentos <i>in natura</i> e minimamente
+                        processados (arroz e feijão), essa participação é de
+                        19,7%.
+                    </p>
+                    <p class="text-font-crimson">
+                        Mas nossos hábitos também estão mudando.
+                    </p>
+                </div>
+            </div>
+            <div class="section-end-cover">
+                <h2>
+                    Caso o país siga a tendência mundial, o nosso arroz e feijão
+                    rotineiros podem perder mais espaço para os produtos
+                    ultraprocessados, com sérias implicações para a saúde de
+                    nossa população e para o SUS.
+                </h2>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="section transition-bg-section" id="results-section">
+            <div class="section-cover">
+                <h1>Custos e Sobrecarga <br />no SUS</h1>
+                <h2>
+                    A epidemia de obesidade indica que as escolhas individuais
+                    têm pouca relevância enquanto permanecem limitadas em um
+                    cenário de mudança do sistema alimentar. Com a população
+                    exposta a cada vez mais alimentos ultraprocessados, temos um
+                    cenário agravante de custos atrelados ao cuidado e às perdas
+                    ocasionadas pelas DCNT.
+                </h2>
+            </div>
+            <div class="grid-3-columns narrow-content">
+                <div class="flex-right-down side-link-wrapper">
+                    <img src="assets/icons/sugary-drinks.png" />
+                    <a
+                        href="https://actbr.org.br/fortalecimento-do-sus"
+                        target="_blank"
+                        >SAIBA MAIS SOBRE O FORTALECIMENTO DO SUS E COMO A
+                        TRIBUTAÇÃO DAS BEBIDAS AÇUCARADAS PODE AJUDAR NESTE
+                        CONTEXTO</a
+                    >
+                </div>
+                <div class="grid-item-2-3 flex-left-down">
+                    <p class="text-font-crimson">
+                        Gastos hospitalares e ambulatoriais vêm crescendo de
+                        forma expressiva no Brasil nos últimos anos. No contexto
+                        de
+                        <span class="bold-text"
+                            >recursos limitados e finitos</span
+                        >
+                        disponíveis, é uma necessidade premente o controle da
+                        epidemia de obesidade no país, através do direcionamento
+                        de recursos para o custeio de
+                        <span class="bold-text"
+                            >programas de promoção de saúde e controle das
+                            doenças</span
+                        >.
+                    </p>
+                    <p class="text-font-crimson">
+                        Em 2019, o gasto anual direto com doenças crônicas não
+                        transmissíveis no Brasil foi de R$ 6,8 bilhões. Em sua
+                        pesquisa, o grupo liderado pelo professor Leandro
+                        Rezende, da Escola Paulista de Medicina da Universidade
+                        Federal de São Paulo (EPM/UNIFESP), estimou que 22%
+                        desse valor, R$ 1,5 bilhão, podem ser atribuíveis ao
+                        excesso de peso e obesidade. Os custos atribuíveis foram
+                        mais elevados nas mulheres (R$ 762 milhões) do que nos
+                        homens (R$ 730 milhões).
+                    </p>
+                </div>
+            </div>
+            <div class="flex-center-center medium-content">
+                <div class="grid-2-columns">
+                    <div>
+                        <img src="assets/icons/annual-cost-total.png"/>
+                        <span class="text-font-grotesque big-number text-dark"
+                            >R$ 6,8 bi</span
+                        >
+                        <br />
+                        <span class="text-font-grotesque number-note text-dark">
+                            de gasto anual direto com doenças crônicas não
+                            transmissíveis no Brasil
+                        </span>
+                    </div>
+                    <div>
+                        <img src="assets/icons/annual-cost-obesity.png"/>
+                        <span class="text-font-grotesque big-number text-dark"
+                            >R$ 1,5 bi</span
+                        >
+                        <br />
+                        <span class="text-font-grotesque number-note text-dark">
+                            podem ser atribuíveis ao excesso de peso e obesidade
+                            - 22% do gasto anual
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-3-columns wide-content" id="main-chart-content">
+                <div class="chart-details-wrapper flex-center-up">
+                    <h2 class="content-title">
+                        O excesso de peso e obesidade expressos em números
+                        <select id="main-chart-location">
+                            <option value="Brasil" selected>no Brasil</option>
+                            <option value="Acre">no estado do Acre</option>
+                            <option value="Alagoas">
+                                no estado de Alagoas
+                            </option>
+                            <option value="Amapá">no estado do Amapá</option>
+                            <option value="Amazonas">
+                                no estado do Amazonas
+                            </option>
+                            <option value="Bahia">no estado da Bahia</option>
+                            <option value="Ceará">no estado do Ceará</option>
+                            <option value="Distrito Federal">
+                                no Distrito Federal
+                            </option>
+                            <option value="Espírito Santo">
+                                no estado do Espírito Santo
+                            </option>
+                            <option value="Goiás">no estado de Goiás</option>
+                            <option value="Maranhão">
+                                no estado do Maranhão
+                            </option>
+                            <option value="Mato Grosso">
+                                no estado do Mato Grosso
+                            </option>
+                            <option value="Mato Grosso do Sul">
+                                no estado do Mato Grosso do Sul
+                            </option>
+                            <option value="Minas Gerais">
+                                no estado do Minas Gerais
+                            </option>
+                            <option value="Pará">no estado do Pará</option>
+                            <option value="Paraíba">
+                                no estado da Paraíba
+                            </option>
+                            <option value="Paraná">no estado do Paraná</option>
+                            <option value="Pernambuco">
+                                no estado de Pernambuco
+                            </option>
+                            <option value="Piauí">no estado do Piauí</option>
+                            <option value="Rio de Janeiro">
+                                no estado do Rio de Janeiro
+                            </option>
+                            <option value="Rio Grande do Norte">
+                                no estado do Rio Grande do Norte
+                            </option>
+                            <option value="Rio Grande do Sul">
+                                no estado do Rio Grande do Sul
+                            </option>
+                            <option value="Rondônia">
+                                no estado de Rondônia
+                            </option>
+                            <option value="Roraima">
+                                no estado de Roraima
+                            </option>
+                            <option value="Santa Catarina">
+                                no estado de Santa Catarina
+                            </option>
+                            <option value="São Paulo">
+                                no estado de São Paulo
+                            </option>
+                            <option value="Sergipe">
+                                no estado de Sergipe
+                            </option>
+                            <option value="Tocantins">
+                                no estado do Tocantins
+                            </option>
+                        </select>
+                        em 2019.
+                    </h2>
+                    <p class="text-font-crimson">
+                        Identificamos gasto anual direto de
+                        <span id="main-chart-cost">R$ XX,X</span> relacionados
+                        às doenças crônicas não transmissíveis. Destes,
+                        <span id="main-chart-atr-cost">R$ XX,X</span> (<span
+                            id="main-chart-percent"
+                            >XX%</span
+                        >) podem ser atribuídos ao excesso de peso e obesidade.
+                    </p>
+                    <p class="text-font-crimson">
+                        Além de:
+                        <span id="main-chart-deaths">XXXXXX</span> mortes,
+                        <span id="main-chart-hospitalizations">XXXXXX</span>
+                        hospitalizações e
+                        <span id="main-chart-ambulatory">XXXXXX</span>
+                        procedimentos ambulatoriais realizados pelo SUS,
+                        atribuíveis ao excesso de peso e obesidade.
+                    </p>
+                    <hr />
+                    <span
+                        id="main-chart-disclaimer"
+                        class="text-font-grotesque"
+                    >
+                        Ao lado, escolha a informação pela qual deseja ordenar
+                        os dados e clique nos grupos de doenças para ver mais
+                        detalhes.
+                    </span>
+                    <table id="main-chart-table"></table>
+                </div>
+                <div class="grid-item-2-3 flex-center-up">
+                    <div id="main-chart-container"></div>
+                </div>
+            </div>
+            <div class="grid-3-columns wide-content" id="map-chart-content">
+                <div class="chart-details-wrapper flex-center-up">
+                    <h2 class="content-title">
+                        <select id="map-chart-indicator">
+                            <option value="cost" selected>
+                                Custo atribuível
+                            </option>
+                            <option value="percent">
+                                Porcentagem Atribuível
+                            </option>
+                            <option value="deaths">Mortes atribuíveis</option>
+                        </select>
+                        ao excesso de peso e obesidade, em 2019, nos estados e
+                        no Distrito Federal.
+                    </h2>
+                    <hr />
+                    <span
+                        id="map-chart-disclaimer"
+                        class="text-font-grotesque"
+                    >
+                        No mapa ao lado, passe o cursor sobre os estados para ver mais detalhes.
+                    </span>
+                </div>
+                <div class="grid-item-2-3 flex-center-up">
+                    <div id="map-chart-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="section dark-background-section" id="policies-section">
+            <div class="section-cover">
+                <h1>
+                    Políticas públicas para a<br />
+                    saúde coletiva
+                </h1>
+                <h2>
+                    Estratégias de identificação e controle das causas
+                    populacionais que levam à obesidade devem ser prioridade da
+                    ação dos gestores. Se os fatores determinantes de aumento da
+                    prevalência da obesidade são populacionais, a estratégia de
+                    prevenção precisa ser social e coletiva, por meio de
+                    políticas públicas eficazes.
+                </h2>
+            </div>
+            <div class="grid-3-columns medium-content">
+                <div class="flex-right-down side-link-wrapper">
+                    <img src="assets/icons/strategic-actions.png" />
+                    <a
+                        href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/publicacoes-svs/doencas-cronicas-nao-transmissiveis-dcnt/09-plano-de-dant-2022_2030.pdf/@@download/file/relatorio_monitoramento_11_2021%20-%20plano%20de%20dant.pdf"
+                        target="_blank"
+                        >PLANO DE AÇÕES ESTRATÉGICAS PARA ENFRENTAMENTO DAS DCNT
+                        NO BRASIL (2021-2030)</a
+                    >
+                </div>
+                <div class="grid-item-2-3 flex-left-down">
+                    <p class="text-font-crimson">
+                        Diante deste cenário pessimista e das implicações que
+                        ele tem sobre o SUS, o Ministério da Saúde do Brasil, em
+                        seu recém publicado “Plano de Ações Estratégicas para
+                        enfrentamento das DCNT no Brasil (2021-2030)” estipulou
+                        a meta de
+                        <span class="bold-text"
+                            >deter o crescimento da obesidade em adultos no país
+                            até 2030</span
+                        >.
+                    </p>
+                    <p class="text-font-crimson">
+                        Essa meta dificilmente será alcançada sem ações,
+                        programas e políticas públicas voltadas às
+                        <span class="bold-text">causas da obesidade</span> na
+                        população e do seu impacto na incidência de DCNT.
+                        <span class="bold-text"
+                            >Se os fatores determinantes de aumento da
+                            prevalência da obesidade são populacionais, a
+                            estratégia precisa ser social e coletiva, por meio
+                            de Políticas Públicas eficazes</span
+                        >.
+                    </p>
+                    <p class="text-font-crimson">
+                        Existem diversas políticas públicas e leis que
+                        necessitam ser implementadas, facilitando a escolha por
+                        alimentos saudáveis na hora das compras e do consumo,
+                        por exemplo:
+                    </p>
+
+                    <ul class="text-list">
+                        <li>Reforma tributária do sistema alimentar;</li>
+                        <li>
+                            Tributação de alimentos ultraprocessados, como
+                            bebidas açucaradas;
+                        </li>
+                        <li>
+                            Informação nutricional mais clara e simples no
+                            rótulo dos produtos;
+                        </li>
+                        <li>
+                            Regras para a publicidade de alimentos,
+                            principalmente para crianças;
+                        </li>
+                        <li>Ampliação do acesso a alimentos orgânicos;</li>
+                        <li>Restrição do uso de agrotóxicos.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-center-center wide-content">
+                <h2 class="content-title-top">
+                    Entenda algumas estratégias importantes que podem ser
+                    tomadas por cada setor:
+                </h2>
+                <div id="network-chart-container">
+                    <img
+                        src="assets/static/actions-network-1.png"
+                        class="limited-height-img"
+                    />
+                </div>
+            </div>
+            <div class="grid-3-columns narrow-content">
+                <div class="flex-right-down side-link-wrapper">
+                    <img src="assets/icons/food-guide.png" />
+                    <a
+                        href="https://www.fsp.usp.br/nupens/o-que-e-o-guia-alimentar/"
+                        target="_blank"
+                        >CONHEÇA O GUIA ALIMENTAR PARA A POPULAÇÃO BRASILEIRA</a
+                    >
+                </div>
+                <div class="grid-item-2-3 flex-left-down">
+                    <p class="text-font-crimson">
+                        No Brasil, o
+                        <span class="bold-text"
+                            >Guia Alimentar para a População Brasileira</span
+                        >
+                        (2014) constitui uma das estratégias para implementação
+                        da diretriz de promoção da alimentação adequada e
+                        saudável que integra a Política Nacional de Alimentação
+                        e Nutrição (PNAN).
+                    </p>
+                    <p class="text-font-crimson">
+                        Os guias alimentares são uma tecnologia de saúde
+                        essencial para a melhora dos padrões de alimentação e
+                        nutrição e para a promoção da saúde das populações, uma
+                        vez que os hábitos alimentares e as condições de saúde
+                        se modificam ao longo do tempo, por diversos fatores.
+                    </p>
+                    <p class="text-font-crimson">
+                        Nesse sentido, o Guia Alimentar para a população
+                        brasileira é considerado um mediador, ou seja, uma
+                        ferramenta orientadora para políticas públicas que devem
+                        se adequar às necessidades da população.
+                    </p>
+                </div>
+            </div>
+            <div class="flex-center-center wide-content">
+                <h2 class="content-title-top">
+                    Conheça as recomendações do guia alimentar para a saúde da
+                    população brasileira:
+                </h2>
+                <div id="personal-network-chart-container">
+                    <img
+                        src="assets/static/actions-network-2.png"
+                        class="limited-height-img"
+                    />
+                </div>
+            </div>
+            <div class="grid-3-columns narrow-content">
+                <div class="flex-right-down">
+                    <h2 class="content-title">
+                        Saiba mais sobre o tema e colabore:
+                    </h2>
+                    <img src="assets/icons/collaborate.png" />
+                </div>
+                <div class="grid-item-2-3 flex-left-down">
+                    <ul class="text-list">
+                        <li>
+                            <a
+                                href="https://actbr.org.br/post/relatorio-por-que-a-comida-saudavel-esta-cada-vez-mais-longe-da-mesa-dos-brasileiros/19121/"
+                                target="_blank"
+                                >Reforma tributária que atue em todo processo
+                                produtivo de alimentos, incentivando o consumo
+                                de alimentos saudáveis e onerando a cadeia de
+                                preços dos alimentos utlraprocessados</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://actbr.org.br/tributacao-de-bebidas-adocadas"
+                                target="_blank"
+                                >Tributação de Bebidas adoçadas</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://actbr.org.br/rotulagem"
+                                target="_blank"
+                                >Rotulagem Nutricional</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idec.org.br/embalagem-ideal"
+                                target="_blank"
+                                >Rotulagem adequada Já</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idec.org.br/10mitoseverdades"
+                                target="_blank"
+                                >10 mitos e verdades sobre os agrotóxicos</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idec.org.br/gordura-trans"
+                                target="_blank"
+                                >A gordura trans que você não vê</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://feirasorganicas.org.br/"
+                                target="_blank"
+                                >Mapas de feiras orgânicas</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idec.org.br/especial/o-acucar-que-voce-nao-ve"
+                                target="_blank"
+                                >O açúcar que você não vê</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idec.org.br/o-sodio-que-voce-nao-ve"
+                                target="_blank"
+                                >O sódio que você não vê</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credits Sections -->
+        <section class="section transition-bg-section" id="credits-section">
+            <div class="flex-left-center narrow-content">
+                <h1>Equipe</h1>
+                <h2 class="text-font-crimson">Coordenação</h2>
+                <p class="text-font-crimson">
+                    Leandro Fórnias Machado de Rezende - Universidade Federal de
+                    São Paulo
+                </p>
+                <h2 class="text-font-crimson">Equipe de Elaboração</h2>
+                <ul class="text-list">
+                    <li>
+                        Beatriz Vitoria Giannichi - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        Bruna de Souza Resende - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        Joana Brant de Carvalho - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        Bruno José dos Santos - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        Jennifer Xavier Pereira - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        José Matheus Estivaleti - Universidade Federal de São
+                        Paulo
+                    </li>
+                    <li>
+                        Luciana Yuki Tomita - Universidade Federal de São Paulo
+                    </li>
+                    <li>Eduardo Nilson - NUPENS/USP</li>
+                    <li>
+                        Laércio da Silva Paiva - Centro Universitário Saúde ABC
+                    </li>
+                    <li>Fernando Adami - Centro Universitário Saúde ABC</li>
+                    <li>
+                        Catarina Machado Azeredo - Universidade Federal de
+                        Uberlândia
+                    </li>
+                    <li>Rafael Claro - Universidade Federal de Minas Gerais</li>
+                    <li>
+                        Gerson Ferrari - Universidad de Santiago de Chile
+                        (USACH)
+                    </li>
+                    <li>Rudi Rocha - FGV/EAESP e IEPS</li>
+                    <li>Beatriz Rache - IEPS</li>
+                    <li>Fernando Falbel - IEPS</li>
+                </ul>
+                <h2 class="text-font-crimson">Financiamento</h2>
+                <img src="assets/page/financing-logos.png" />
+                <p id="financing-details" class="text-font-crimson">
+                    Conselho Nacional de Desenvolvimento Científico e
+                    Tecnológico (CNPq), processo no 442658/2019-2
+                </p>
+                <ul class="text-list" id="development-details">
+                  <li>
+                    <span class="bold-text">Estratégia, design e desenvolvimento:</span>
+                    <a href="https://odd.studio/" id="odd-reference">odd.studio</a>
+                  </li>
+                <ul>
+            </div>
+            <div class="flex-left-center narrow-content">
+                <h2 id="references-title" class="text-font-crimson">
+                    Referências
+                </h2>
+                <ol>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Vigilância em
+                        Saúde. Departamento de Análise em Saúde e Vigilância de
+                        Doenças Não Transmissíveis. Plano de Ações Estratégicas
+                        para o Enfrentamento das Doenças Crônicas e Agravos não
+                        Transmissíveis no Brasil, 2021-2030. Ministério da
+                        Saúde, Secretaria de Vigilância em Saúde, Departamento
+                        de Análise em Saúde e Vigilância de Doenças Não
+                        Transmissíveis. – Brasília: Ministério da Saúde, 2021.
+                    </li>
+                    <li>
+                        INCA. Dados e números da prevalência do tabagismo.
+                        Acesso em 19/10/2021:
+                        https://www.inca.gov.br/observatorio-da-politica-nacional-de-controle-do-tabaco/dados-e-numeros-prevalencia-tabagismo
+                    </li>
+                    <li>
+                        World Health Organization. Obesity. Acesso em
+                        19/10/2021: https://www.who.int/health-topics/obesity
+                    </li>
+                    <li>
+                        Ministério da Saúde. Secretaria de Vigilância em Saúde.
+                        Departamento de Análise em Saúde e Vigilância de Doenças
+                        Não Transmissíveis. Vigitel Brasil 2019 : vigilância de
+                        fatores de risco e proteção para doenças crônicas por
+                        inquérito telefônico : estimativas sobre frequência e
+                        distribuição sociodemográfica de fatores de risco e
+                        proteção para doenças crônicas nas capitais dos 26
+                        estados brasileiros e no Distrito Federal em 2019.
+                        Ministério da Saúde, Secretaria de Vigilância em Saúde,
+                        Departamento de Análise em Saúde e Vigilância de Doenças
+                        não Transmissíveis. Brasília: Ministério da Saúde, 2020.
+                    </li>
+                    <li>
+                        Geoffrey Rose, Sick individuals and sick populations,
+                        International Journal of Epidemiology, Volume 30, Issue
+                        3, June 2001, Pages 427–432,
+                        https://doi.org/10.1093/ije/30.3.427. Disponível em:
+                        https://academic.oup.com/ije/article/30/3/427/736897
+                        Acesso em 23 de outubro de 2021.
+                    </li>
+                    <li>
+                        Bleich S, Cutler D, Murray C, Adams A. Why is the
+                        developed world obese?. Annu Rev Public Health.
+                        2008;29:273-295.
+                        doi:10.1146/annurev.publhealth.29.020907.090954
+                    </li>
+                    <li>
+                        Rodgers, Anthony; Woodward, Alistair; Swinburn, Boyd;
+                        Dietz, William H. Prevalence trends tell us what did not
+                        precipitate the US obesity epidemic . The Lancet, vol 3,
+                        2018. Disponível em:
+                        https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(18)30021-5/fulltext
+                        Acesso em 23 de outubro de 2021.
+                    </li>
+                    <li>
+                        Geoffrey Rose, Sick individuals and sick populations,
+                        International Journal of Epidemiology, Volume 30, Issue
+                        3, June 2001, Pages 427–432,
+                        https://doi.org/10.1093/ije/30.3.427. Disponível em:
+                        https://academic.oup.com/ije/article/30/3/427/736897
+                        Acesso em 23 de outubro de 2021.
+                    </li>
+                    <li>
+                        Pan American Health Organization. Ultra-processed food
+                        and drink products in Latin America: Sales, sources,
+                        nutrient profiles, and policy implications. Washington,
+                        D.C.: PAHO; 2019.
+                        https://iris.paho.org/handle/10665.2/51094
+                    </li>
+                    <li>
+                        Martini D, Godos J, Bonaccio M, Vitaglione P, Grosso G.
+                        Ultra-Processed Foods and Nutritional Dietary Profile: A
+                        Meta-Analysis of Nationally Representative Samples.
+                        Nutrients. 2021;13(10):3390. Published 2021 Sep 27.
+                        doi:10.3390/nu13103390
+                    </li>
+                    <li>https://www.cdc.gov/obesity/data/adult.html.</li>
+                    <li>
+                        Askari M, Heshmati J, Shahinfar H, Tripathi N, Daneshzad
+                        E. Ultra-processed food and the risk of overweight and
+                        obesity: a systematic review and meta-analysis of
+                        observational studies. Int J Obes (Lond).
+                        2020;44(10):2080-2091. doi:10.1038/s41366-020-00650-z
+                    </li>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Atenção à
+                        Saúde. Departamento de Atenção Básica. Guia alimentar
+                        para a população brasileira. 2. ed. Brasília: Ministério
+                        da Saúde, 2014.
+                        https://www.fsp.usp.br/nupens/o-que-e-o-guia-alimentar/
+                    </li>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Atenção à
+                        Saúde. Departamento de Atenção Básica. Guia alimentar
+                        para a população brasileira / Ministério da Saúde,
+                        Secretaria de Atenção à Saúde, Departamento de Atenção
+                        Básica. – 2. ed., 1. reimpr. – Brasília : Ministério da
+                        Saúde, 2014. 156 p. : il Disponível em:
+                        https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf
+                        Acesso em 25 de outubro de 2021.
+                    </li>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Atenção à
+                        Saúde. Departamento de Atenção Básica. Política Nacional
+                        de Alimentação e Nutrição / Ministério da Saúde,
+                        Secretaria de Atenção à Saúde. Departamento de Atenção
+                        Básica.Básica. – 1. ed., 1. reimpr. – Brasília :
+                        Ministério da Saúde, 2013. 84 p. : il Disponível em:
+                        https://bvsms.saude.gov.br/bvs/publicacoes/politica_nacional_alimentacao_nutricao.pdf
+                        Acesso em 25 de outubro de 2021.
+                    </li>
+                    <li>https://idec.org.br/programas-tematicos/alimentacao</li>
+                    <li>
+                        Brasil. Agência Nacional de Vigilância Sanitária. Anvisa
+                        disponibiliza arquivos com modelos para rotulagem
+                        nutricional (2021). Disponível em:
+                        https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2021/anvisa-disponibiliza-arquivos-com-modelos-para-rotulagem-nutricional
+                        Acesso em 29 de outubro de 2021
+                    </li>
+                    <li>
+                        ACT promoção da saúde. Tributação de bebidas adoçadas
+                        (s.a.a). Disponível em:
+                        https://actbr.org.br/tributacao-de-bebidas-adocadas
+                        Acesso em 22 de outubro de 2021.
+                    </li>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Atenção à
+                        Saúde. Departamento de Atenção Básica. Guia alimentar
+                        para a população brasileira / Ministério da Saúde,
+                        Secretaria de Atenção à Saúde, Departamento de Atenção
+                        Básica. – 2. ed., 1. reimpr. – Brasília : Ministério da
+                        Saúde, 2014. 156 p. : il Disponível em:
+                        https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf
+                        Acesso em 25 de outubro de 2021.
+                    </li>
+                    <li>
+                        Brasil. Ministério da Saúde. Secretaria de Atenção
+                        Primária à Saúde. Departamento de Promoção da Saúde.
+                        Guia de Atividade Física para a População Brasileira
+                        [recurso eletrônico] / Ministério da Saúde, Secretaria
+                        de Atenção Primária à Saúde, Departamento de Promoção da
+                        Saúde. – Brasília : Ministério da Saúde, 2021. 54 p.: il
+                        Disponível em:
+                        https://bvsms.saude.gov.br/bvs/publicacoes/guia_atividade_fisica_populacao_brasileira.pdf
+                    </li>
+                </ol>
+                <img id="thank-you-img" src="assets/page/thank-you-peeps.png" />
+            </div>
+        </section>
+
+        <!-- Scripts -->
+        <script src="code/charts.js"></script>
+        <script src="code/main-chart.js"></script>
+        <script src="code/map-chart.js"></script>
+        <script src="code/navigation.js"></script>
+        <script src="code/processing-types-chart.js"></script>
+        <script src="code/image-transitions.js"></script>
+    </body>
+</html>
