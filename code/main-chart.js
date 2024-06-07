@@ -56,10 +56,10 @@ const formatMainChartValue = (value, indicator) => {
         label = (value / 1e3).toFixed(2) + ' mil';
     } else if (value < 1e9) {
         label = (value / 1e6).toFixed(2) + ' milhões';
-        if ((value / 1e6).toFixed(2) === '1.00') label = '1 milhão';
+        if ((value / 1e6).toFixed(2) < '2.00') label = (value / 1e6).toFixed(2) + ' milhão';
     } else {
         label = (value / 1e9).toFixed(2) + ' bilhões';
-        if ((value / 1e9).toFixed(2) === '1.00') label = '1 bilhão';
+        if ((value / 1e9).toFixed(2) < '2.00') label = (value / 1e9).toFixed(2) + ' bilhão';
     }
 
     return indicator === 'cost'
